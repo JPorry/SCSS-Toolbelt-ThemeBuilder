@@ -45,6 +45,14 @@ gulp.task('clean', function(cb){
     });
 });
 
+gulp.task('copyCSS', ['sass'], function(cb){
+    gulp.src(config.css)
+        .pipe(gulp.dest(config.build_dir + '/css'))
+        .on('finish', function(){
+            return cb();
+        });
+});
+
 gulp.task('sass', ['clean:CSS'], function(cb){
     gulp.src('./src/sass/app.scss')
         .pipe(sass({outputStyle:'compressed'}))
@@ -84,14 +92,14 @@ gulp.task('deployJS:debug', ['lint', 'reConfig'], function(cb){
         });
 });
 
-gulp.task('package:debug', ['deployJS:debug', 'sass', 'clean:HTML'], function(){
+gulp.task('package:debug', ['deployJS:debug', 'copyCSS', 'clean:HTML'], function(){
     var scripts = globule.find(['js/**/*.js'], {srcBase: config.build_dir});
-    scripts.push(scripts.shift());
     gulp.src('index.html')
         .pipe(
             htmlReplace({
                 appJs: scripts,
-                dependencies: config.dependencies.map(function(path){ return 'vendor/' + path.substr(path.lastIndexOf('/') + 1); })
+                dependencies: config.dependencies.map(function(path){ return 'vendor/' + path.substr(path.lastIndexOf('/') + 1); }),
+                CSSDependencies: config.css.map(function(path){ return 'css/' + path.substr(path.lastIndexOf('/') + 1); })
             })
         )
         .pipe(gulp.dest(config.build_dir, {overwrite: true}));
@@ -106,5 +114,5 @@ gulp.task('debug', ['package:debug'], function() {
     });
 
     gulp.watch(["./src/**/*.js", "./**/*.html", './config.json'], ['package:debug', reload]);
-    gulp.watch("./src/**/*.scss", ['sass', reload]);
+    gulp.watch("./src/**/*.scss", ['copyCSS', reload]);
 });

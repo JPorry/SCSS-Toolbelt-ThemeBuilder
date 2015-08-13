@@ -1,1 +1,152 @@
-@import "reseter";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+@import "./toolbelt/toolbelt";
+
+$background-color: #fff;
+
+$aside-background-color: #e2e2ee;
+$side-menu-width: 350px;
+
+html, body{
+  width: 100%;
+  background-color: $aside-background-color;
+}
+
+body.open .wrapper{
+
+  aside{
+    width: $side-menu-width;
+  }
+
+  .content{
+    margin-left: $side-menu-width;
+  }
+}
+
+body .wrapper{
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+
+  aside{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: $aside-background-color;
+    z-index: 49;
+
+    h2{
+      font-size: 1.1rem;
+      display: inline-block;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      background-color: #c0c0c0;
+      padding: 0 10px;
+      cursor: pointer;
+      position: relative;
+
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 10px;
+        height: 10px;
+        border: 10px solid transparent;
+        border-top-color: #666;
+        transform: rotateZ(0deg);
+        transform-origin: 10px 5px;
+
+        transition: transform .5s;
+      }
+
+      &.open:before{
+        transform: rotateZ(180deg);
+      }
+    }
+
+    form{
+      padding-left: 10px;
+    }
+
+  }
+
+  .content{
+    @include row();
+    min-height: 100vh;
+
+    @include large-styles(){
+      background-image: linear-gradient(to right, $lightColor 0%, $lightColor 25%, $background-color 25%, $background-color 100%);
+      background-repeat: repeat-y;
+    }
+
+    h2{
+      font-size: 1.8rem;
+      margin: 15px 0;
+    }
+
+    header{
+      @include grid-cell();
+    }
+
+    .sideMenu{
+      @include grid-cell();
+      @include large-grid-cell(1,4);
+
+      background-color: pink;
+
+      .sideMenu{
+        height: 100%;
+      }
+    }
+
+    .main{
+      @include grid-cell(1,1,0,20px);
+      @include large-grid-cell(3,4);
+    }
+  }
+}
+
+.alert{
+  margin-bottom: 15px;
+}
+
+.popup-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000;
+  opacity: .6;
+  display: none;
+}
+
+label.input{
+
+  margin-bottom: 20px;
+  padding-top: 3px;
+  padding-left: 95px;
+  font-size: .9rem;
+
+  &.overwritten{
+    color: $infoColor;
+  }
+
+  button{
+    position: absolute;
+    top: -10px;
+    left: 0;
+  }
+
+  .sp-replacer{
+    display: inline-block;
+    position: absolute;
+    left: 35px;
+    top: -5px;
+  }
+}

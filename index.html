@@ -2,16 +2,19 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>SegmentEditor</title>
+    <title>CSS TOOLBELT THEME BUILDER</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- build:CSSDependencies -->
+    <!-- endbuild -->
+
     <link rel="stylesheet" href="./css/app.css"/>
 </head>
-<body ng-app="baseProject">
+<body ng-app="baseProject" class="open">
 
-    <header>
-        <h1 ui-sref="home">Base Project</h1>
-    </header>
-
-    <div class="main">
+    <ui-view name="styles"></ui-view>
+    <div class="wrapper">
+        <ui-view name="sidebar"></ui-view>
         <ui-view></ui-view>
     </div>
 

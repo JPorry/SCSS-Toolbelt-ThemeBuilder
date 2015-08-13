@@ -1,0 +1,90 @@
+<style>
+
+    .toolbar {
+    background-color: {{styles.styles['$toolbar-background-color'] || styles.styles.$darkColor}};
+    color: {{styles.styles['$toolbar-text-color'] || styles.styles.$lightColor}};
+    }
+
+    .toolbar .menu{
+    background-color: {{styles.styles['$toolbar-background-color'] || styles.styles.$darkColor}};
+    }
+
+    .toolbar .menu ul li:hover, .toolbar .menu ul li.active{
+    color: {{styles.styles['$toolbar-highlight-color'] || styles.styles.$contrastColor}};
+    }
+
+    .side-menu{
+    background-color: {{styles.styles.$darkColor}};
+    }
+
+    .side-menu li a{
+    color: {{styles.styles.$lightColor}};
+    }
+
+    .side-menu li:HOVER, .side-menu li.selected{
+    background-color: {{styles.styles.$contrastColor}};
+    }
+
+    table thead{
+    color: {{styles.styles.$lightColor}};
+    }
+
+    table thead tr{
+    background-color: {{styles.styles.$darkColor}};
+    border-bottom: 2px solid {{styles.styles.$midtone}};
+    }
+
+    button{
+    color: {{styles.styles.$lightTextColor}};
+    background-color: {{styles.styles.$primaryColor}};
+    }
+
+    button.secondary{
+    background-color: {{styles.styles.$secondaryColor}};
+    }
+
+    button.danger{
+    background-color: {{styles.styles.$dangerColor}};
+    }
+
+    button.info{
+    background-color: {{styles.styles.$infoColor}};
+    }
+
+    button.warning{
+    background-color: {{styles.styles.$warningColor}};
+    }
+
+    button:disabled{
+    background-color: {{styles.styles.$disabledColor}} !important;
+    }
+
+    .alert{
+    color: {{styles.styles.$lightTextColor}};
+    background-color: {{styles.styles.$primaryColor}};
+    }
+
+    .alert.secondary{
+    background-color: {{styles.styles.$secondaryColor}};
+    }
+
+    .alert.danger{
+    background-color: {{styles.styles.$dangerColor}};
+    }
+
+    .alert.info{
+    background-color: {{styles.styles.$infoColor}};
+    }
+
+    .alert.warning{
+    background-color: {{styles.styles.$warningColor}};
+    }
+
+    @media screen and (min-width: 1024px){
+        body .wrapper .content {
+            background-image: linear-gradient(to right, {{styles.styles.$darkColor}} 0%, {{styles.styles.$darkColor}} 25%, #fff 25%, #fff 100%);
+            background-repeat: repeat-y;
+        }
+    }
+
+</style>

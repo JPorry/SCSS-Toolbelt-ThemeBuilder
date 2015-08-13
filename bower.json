@@ -9,6 +9,9 @@
   "dependencies": {
     "angular": "~1.4.1",
     "underscore": "~1.8.3",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+    "spectrum": "~1.7.1",
+    "jquery": "~2.1.4",
+    "angular-spectrum-colorpicker": "~1.4.1"
   }
 }

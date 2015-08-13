@@ -1,8 +1,8 @@
 'use strict';
 angular.module('baseProject')
-    .controller('homeCtrl', function(){
-        var home = this;
-        home.styles = {
+    .factory('Styles', function(){
+
+        var styles = {
             $darkColor: '#2C3E50',
             $lightColor: '#ECF0F1',
             $contrastColor: '#F39C12',
@@ -19,17 +19,6 @@ angular.module('baseProject')
             $disabledColor: '#BDC3C7'
         };
 
-        home.sectionsStatus = {
-            general: true,
-            toolbar: false
-        };
-
-        home.deleteValue = function(value){
-            delete home.styles[value];
-        };
-
-        home.toggle = function(target){
-            home.sectionsStatus[target] = !home.sectionsStatus[target];
-        };
+        return styles;
 
     });
