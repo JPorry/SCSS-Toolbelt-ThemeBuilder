@@ -1,0 +1,3 @@
+[submodule "src/sass/toolbelt"]
+	path = src/sass/toolbelt
+	url = https://github.com/JPorry/SCSS-Toolbelt.git
