@@ -1,0 +1,14 @@
+{
+  "name": "SegmentEditor",
+  "version": "1.0.0",
+  "authors": [],
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.1",
+    "underscore": "~1.8.3",
+    "angular-ui-router": "~0.2.15"
+  }
+}
