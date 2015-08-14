@@ -21,29 +21,56 @@
     /* Side Menu styles */
 
     .side-menu{
-        background-color: {{styles.variables.$darkColor}};
+        background-color: {{styles.variables['$side-menu-background-color'] || styles.variables.$darkColor}};
+    }
+
+    .side-menu .side-menu-title{
+        color: {{styles.variables['$side-menu-title-color'] || styles.variables.$contrastColor}}
     }
 
     .side-menu li a{
-        color: {{styles.variables.$lightColor}};
+        color: {{styles.variables['$side-menu-text-color'] || styles.variables.$lightColor}};
     }
 
     .side-menu li:HOVER, .side-menu li.selected{
-        background-color: {{styles.variables.$contrastColor}};
+        background-color: {{styles.variables['$side-menu-highlighted-color'] || styles.variables.$contrastColor}};
     }
 
 
 
-
+    /* Table styles */
 
     table thead{
-        color: {{styles.variables.$lightColor}};
+        color: {{styles.variables['$table-header-text-color'] || styles.variables.$lightColor}};
     }
 
     table thead tr{
-        background-color: {{styles.variables.$darkColor}};
-        border-bottom: 2px solid {{styles.variables.$midtone}};
+        background-color: {{styles.variables['$table-header-background-color'] || styles.variables.$darkColor}};
+        border-bottom: 2px solid {{styles.variables['$table-border-color'] || styles.variables.$midtone}};
     }
+
+    table tbody tr{
+        border-bottom: 1px solid {{styles.variables['$table-border-color'] || styles.variables.$midtone}};
+        border-top: 1px solid {{styles.variables['$table-border-color'] || styles.variables.$midtone}};
+        background-color: {{styles.variables['$table-row-color'] || 'transparent'}};
+    }
+
+    table tbody tr:hover{
+        background-color: {{styles.variables['$table-hover-row-color'] || '#f0f0f0'}} !important;
+    }
+
+    table.zebra tbody tr:nth-child(even){
+        background-color: {{styles.variables['$table-even-row-color'] || '#f6f6f6'}};
+    }
+
+    table thead th.sortable.sorted{
+        border-bottom: 3px solid {{styles.variables['$table-contrast-color'] || styles.variables.$contrastColor}};
+    }
+
+    table thead th.sortable:hover:after{
+        border-top: 7px solid {{styles.variables['$table-contrast-color'] || styles.variables.$contrastColor}};
+    }
+
 
 
 
