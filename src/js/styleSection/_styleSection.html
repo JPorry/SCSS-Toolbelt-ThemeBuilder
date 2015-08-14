@@ -1,88 +1,111 @@
 <style>
 
+
+    /* Toolbar styles */
+
     .toolbar {
-    background-color: {{styles.styles['$toolbar-background-color'] || styles.styles.$darkColor}};
-    color: {{styles.styles['$toolbar-text-color'] || styles.styles.$lightColor}};
+        background-color: {{styles.variables['$toolbar-background-color'] || styles.variables.$darkColor}};
+        color: {{styles.variables['$toolbar-text-color'] || styles.variables.$lightColor}};
     }
 
     .toolbar .menu{
-    background-color: {{styles.styles['$toolbar-background-color'] || styles.styles.$darkColor}};
+        background-color: {{styles.variables['$toolbar-background-color'] || styles.variables.$darkColor}};
     }
 
     .toolbar .menu ul li:hover, .toolbar .menu ul li.active{
-    color: {{styles.styles['$toolbar-highlight-color'] || styles.styles.$contrastColor}};
+        color: {{styles.variables['$toolbar-highlight-color'] || styles.variables.$contrastColor}};
     }
 
+
+
+    /* Side Menu styles */
+
     .side-menu{
-    background-color: {{styles.styles.$darkColor}};
+        background-color: {{styles.variables.$darkColor}};
     }
 
     .side-menu li a{
-    color: {{styles.styles.$lightColor}};
+        color: {{styles.variables.$lightColor}};
     }
 
     .side-menu li:HOVER, .side-menu li.selected{
-    background-color: {{styles.styles.$contrastColor}};
+        background-color: {{styles.variables.$contrastColor}};
     }
 
+
+
+
+
     table thead{
-    color: {{styles.styles.$lightColor}};
+        color: {{styles.variables.$lightColor}};
     }
 
     table thead tr{
-    background-color: {{styles.styles.$darkColor}};
-    border-bottom: 2px solid {{styles.styles.$midtone}};
+        background-color: {{styles.variables.$darkColor}};
+        border-bottom: 2px solid {{styles.variables.$midtone}};
     }
 
+
+
+
+
     button{
-    color: {{styles.styles.$lightTextColor}};
-    background-color: {{styles.styles.$primaryColor}};
+        color: {{styles.variables.$lightTextColor}};
+        background-color: {{styles.variables.$primaryColor}};
     }
 
     button.secondary{
-    background-color: {{styles.styles.$secondaryColor}};
+        background-color: {{styles.variables.$secondaryColor}};
     }
 
     button.danger{
-    background-color: {{styles.styles.$dangerColor}};
+        background-color: {{styles.variables.$dangerColor}};
     }
 
     button.info{
-    background-color: {{styles.styles.$infoColor}};
+        background-color: {{styles.variables.$infoColor}};
     }
 
     button.warning{
-    background-color: {{styles.styles.$warningColor}};
+        background-color: {{styles.variables.$warningColor}};
     }
 
     button:disabled{
-    background-color: {{styles.styles.$disabledColor}} !important;
+        background-color: {{styles.variables.$disabledColor}} !important;
     }
 
+
+
+
+
     .alert{
-    color: {{styles.styles.$lightTextColor}};
-    background-color: {{styles.styles.$primaryColor}};
+        color: {{styles.variables.$lightTextColor}};
+        background-color: {{styles.variables.$primaryColor}};
     }
 
     .alert.secondary{
-    background-color: {{styles.styles.$secondaryColor}};
+        background-color: {{styles.variables.$secondaryColor}};
     }
 
     .alert.danger{
-    background-color: {{styles.styles.$dangerColor}};
+        background-color: {{styles.variables.$dangerColor}};
     }
 
     .alert.info{
-    background-color: {{styles.styles.$infoColor}};
+        background-color: {{styles.variables.$infoColor}};
     }
 
     .alert.warning{
-    background-color: {{styles.styles.$warningColor}};
+        background-color: {{styles.variables.$warningColor}};
     }
+
+
+
+
 
     @media screen and (min-width: 1024px){
         body .wrapper .content {
-            background-image: linear-gradient(to right, {{styles.styles.$darkColor}} 0%, {{styles.styles.$darkColor}} 25%, #fff 25%, #fff 100%);
+            background-image: linear-gradient(to right, {{styles.variables.$darkColor}} 0%, {{styles.variables.$darkColor}} 25%, #fff 25%, #fff 100%);
             background-repeat: repeat-y;
         }
     }

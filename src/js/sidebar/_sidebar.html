@@ -1,58 +1,36 @@
 <aside class="open">
-    <h2 ng-click="sidebar.toggle('general')" ng-class="{open: sidebar.sectionsStatus.general}">General Variables</h2>
-    <form action="" ng-show="sidebar.sectionsStatus.general">
-        <label class="input">$darkColor
-            <spectrum-colorpicker ng-model="sidebar.styles.$darkColor" options="{showInput: true}"></spectrum-colorpicker>
-        </label>
-        <label class="input">$lightColor
-            <spectrum-colorpicker ng-model="sidebar.styles.$lightColor" options="{showInput: true}"></spectrum-colorpicker>
-        </label>
-        <label class="input">$contrastColor
-            <spectrum-colorpicker ng-model="sidebar.styles.$contrastColor" options="{showInput: true}"></spectrum-colorpicker>
-        </label>
-        <label class="input">$midtone
-            <spectrum-colorpicker ng-model="sidebar.styles.$midtone" options="{showInput: true}"></spectrum-colorpicker>
-        </label>
+    <collapsable title="General Variables" open="true">
+        <form action="">
+            <variable-changer variable="$darkColor"></variable-changer>
+            <variable-changer variable="$lightColor"></variable-changer>
+            <variable-changer variable="$contrastColor"></variable-changer>
+            <variable-changer variable="$midtone"></variable-changer>
+            <variable-changer variable="$darkTextColor"></variable-changer>
+            <variable-changer variable="$lightTextColor"></variable-changer>
+            <variable-changer variable="$primaryColor"></variable-changer>
+            <variable-changer variable="$secondaryColor"></variable-changer>
+            <variable-changer variable="$dangerColor"></variable-changer>
+            <variable-changer variable="$infoColor"></variable-changer>
+            <variable-changer variable="$warningColor"></variable-changer>
+            <variable-changer variable="$disabledColor"></variable-changer>
+        </form>
+    </collapsable>
 
-        <label class="input">$darkTextColor
-            <spectrum-colorpicker ng-model="sidebar.styles.$darkTextColor" options="{showInput: true}"></spectrum-colorpicker>
-        </label>
-        <label class="input">$lightTextColor
-            <spectrum-colorpicker ng-model="sidebar.styles.$lightTextColor" options="{showInput: true}"></spectrum-colorpicker>
-        </label>
-        <label class="input">$primaryColor
-            <spectrum-colorpicker ng-model="sidebar.styles.$primaryColor" options="{showInput: true}"></spectrum-colorpicker>
-        </label>
-        <label class="input">$secondaryColor
-            <spectrum-colorpicker ng-model="sidebar.styles.$secondaryColor" options="{showInput: true}"></spectrum-colorpicker>
-        </label>
-        <label class="input">$dangerColor
-            <spectrum-colorpicker ng-model="sidebar.styles.$dangerColor" options="{showInput: true}"></spectrum-colorpicker>
-        </label>
-        <label class="input">$infoColor
-            <spectrum-colorpicker ng-model="sidebar.styles.$infoColor" options="{showInput: true}"></spectrum-colorpicker>
-        </label>
-        <label class="input">$warningColor
-            <spectrum-colorpicker ng-model="sidebar.styles.$warningColor" options="{showInput: true}"></spectrum-colorpicker>
-        </label>
-        <label class="input">$disabledColor
-            <spectrum-colorpicker ng-model="sidebar.styles.$disabledColor" options="{showInput: true}"></spectrum-colorpicker>
-        </label>
 
-    </form>
-    <h2 ng-click="sidebar.toggle('toolbar')" ng-class="{open: sidebar.sectionsStatus.toolbar}">Toolbar Variables</h2>
-    <form action="" ng-show="sidebar.sectionsStatus.toolbar">
-        <label class="input" ng-class="{overwritten: sidebar.styles['$toolbar-background-color']}">$toolbar-background-color
-            <button class="small icon" ng-disabled="!sidebar.styles['$toolbar-background-color']" ng-click="sidebar.deleteValue('$toolbar-background-color')"><i class="fa fa-trash-o"></i></button>
-            <spectrum-colorpicker ng-model="sidebar.styles['$toolbar-background-color']" options="{showInput: true, preferredFormat: 'hex'}"></spectrum-colorpicker>
-        </label>
-        <label class="input" ng-class="{overwritten: sidebar.styles['$toolbar-text-color']}">$toolbar-text-color
-            <button class="small icon" ng-disabled="!sidebar.styles['$toolbar-text-color']" ng-click="sidebar.deleteValue('$toolbar-text-color')"><i class="fa fa-trash-o"></i></button>
-            <spectrum-colorpicker ng-model="sidebar.styles['$toolbar-text-color']" options="{showInput: true, preferredFormat: 'hex'}"></spectrum-colorpicker>
-        </label>
-        <label class="input" ng-class="{overwritten: sidebar.styles['$toolbar-highlight-color']}">$toolbar-highlight-color
-            <button class="small icon" ng-disabled="!sidebar.styles['$toolbar-highlight-color']" ng-click="sidebar.deleteValue('$toolbar-highlight-color')"><i class="fa fa-trash-o"></i></button>
-            <spectrum-colorpicker ng-model="sidebar.styles['$toolbar-highlight-color']" options="{showInput: true, preferredFormat: 'hex'}"></spectrum-colorpicker>
-        </label>
-    </form>
+    <collapsable title="Toolbar Variables">
+        <form action="">
+            <variable-changer variable="$toolbar-background-color" specific="true"></variable-changer>
+            <variable-changer variable="$toolbar-text-color" specific="true"></variable-changer>
+            <variable-changer variable="$toolbar-highlight-color" specific="true"></variable-changer>
+        </form>
+    </collapsable>
+
+
+    <collapsable title="Side Menu Variables">
+        <form action="">
+            <variable-changer variable="$side-menu-background-color" specific="true"></variable-changer>
+            <variable-changer variable="$side-menu-text-color" specific="true"></variable-changer>
+            <variable-changer variable="$side-menu-highlighted-color" specific="true"></variable-changer>
+        </form>
+    </collapsable>
 </aside>

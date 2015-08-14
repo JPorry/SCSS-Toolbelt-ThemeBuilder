@@ -1,6 +1,6 @@
 'use strict';
 angular.module('baseProject')
-    .controller('styleSectionCtrl', function(Styles){
+    .controller('styleSectionCtrl', function(Variables){
         var styles = this;
-        styles.styles = Styles
+        styles.variables = Variables;
     });

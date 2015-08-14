@@ -1,8 +1,8 @@
 'use strict';
 angular.module('baseProject')
-    .factory('Styles', function(){
+    .factory('Variables', function(){
 
-        var styles = {
+        var variables = {
             $darkColor: '#2C3E50',
             $lightColor: '#ECF0F1',
             $contrastColor: '#F39C12',
@@ -19,6 +19,6 @@ angular.module('baseProject')
             $disabledColor: '#BDC3C7'
         };
 
-        return styles;
+        return variables;
 
     });
