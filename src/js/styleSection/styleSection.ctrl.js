@@ -2,5 +2,5 @@
 angular.module('baseProject')
     .controller('styleSectionCtrl', function(Variables){
         var styles = this;
-        styles.variables = Variables;
+        styles.variables = Variables.variables;
     });

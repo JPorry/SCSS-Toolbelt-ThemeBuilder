@@ -2,7 +2,7 @@
 angular.module('baseProject')
     .factory('Variables', function(){
 
-        var variables = {
+        var defaultVariables = {
             $darkColor: '#2C3E50',
             $lightColor: '#ECF0F1',
             $contrastColor: '#F39C12',
@@ -19,6 +19,30 @@ angular.module('baseProject')
             $disabledColor: '#BDC3C7'
         };
 
-        return variables;
+        var variables = _.extend({}, defaultVariables);
+
+        function reset(){
+            _.forEach(variables, function(val, key){
+                variables[key] = defaultVariables[key];
+            });
+        }
+
+        function generateThemeFile(){
+
+            var scssString = '';
+
+            _.forEach(variables, function(val, key){
+                scssString += key + ': ' + val + ';\n';
+            });
+
+            var blob = new Blob([scssString], {type: 'text/plain;charset=utf-8'});
+            saveAs(blob, 'theme.scss');
+        }
+
+        return {
+            variables: variables,
+            reset: reset,
+            generateThemeFile: generateThemeFile
+        };
 
     });
