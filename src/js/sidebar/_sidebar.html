@@ -1,4 +1,8 @@
-<aside class="open">
+<aside ng-class="{open: sidebar.sidebar.isOpen}">
+    <div class="sidebarHeader">
+        <i class="fa fa-times" ng-click="sidebar.toggle()"></i>
+    </div>
+
     <collapsable title="General Variables" open="true">
         <form action="">
             <variable-changer variable="$darkColor"></variable-changer>
@@ -50,5 +54,9 @@
     <div class="footerButtons">
         <button class="warning" ng-click="sidebar.reset()"><i class="fa fa-refresh"></i> Reset</button>
         <button ng-click="sidebar.generateThemeFile()"><i class="fa fa-file-code-o"></i> Generate Theme</button>
+    </div>
+
+    <div class="restoreSidebar" ng-click="sidebar.toggle()">
+        <i class="fa fa-cogs"></i>
     </div>
 </aside>
