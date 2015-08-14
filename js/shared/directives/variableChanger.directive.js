@@ -10,7 +10,7 @@ angular.module('baseProject')
             replace: true,
             controller: ["$scope", "Variables", function($scope, Variables){
 
-                $scope.variables = Variables;
+                $scope.variables = Variables.variables;
 
                 $scope.deleteValue = function(){
                     delete $scope.variables[$scope.variable];
