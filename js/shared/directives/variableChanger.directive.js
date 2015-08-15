@@ -5,7 +5,8 @@ angular.module('baseProject')
             restrict: 'E',
             scope: {
                 variable: '@',
-                specific: '@'
+                specific: '@',
+                label: '@'
             },
             replace: true,
             controller: ["$scope", "Variables", function($scope, Variables){
@@ -17,9 +18,9 @@ angular.module('baseProject')
                 };
             }],
             template:
-                '<label class="input" ng-class="{overwritten: specific && variables[variable]}">{{variable}}' +
+                '<label class="input" ng-class="{overwritten: specific && variables[variable]}">{{label || variable}}' +
                     '<button ng-if="specific" class="small icon" ng-disabled="!variables[variable]" ng-click="deleteValue()"><i class="fa fa-trash-o"></i></button>'+
-                    '<spectrum-colorpicker ng-model="variables[variable]" options="{showInput: true, preferredFormat: \'hex\'}"></spectrum-colorpicker>' +
+                    '<spectrum-colorpicker ng-model="variables[variable]" options="{showInput: true, preferredFormat: \'hex\', showAlpha: true}"></spectrum-colorpicker>' +
                 '</label>'
         };
     });
