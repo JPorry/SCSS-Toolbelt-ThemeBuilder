@@ -16,6 +16,15 @@
         color: {{styles.variables['$toolbar-highlight-color'] || styles.variables.$contrastColor}};
     }
 
+    .toolbar.light{
+        background-color: {{styles.variables['$toolbar-text-color'] || styles.variables.$lightColor}};
+        color: {{styles.variables['$toolbar-background-color'] || styles.variables.$darkColor}};
+    }
+
+    .toolbar.light .menu{
+        background-color: {{styles.variables['$toolbar-text-color'] || styles.variables.$lightColor}};
+    }
+
 
 
     /* Side Menu styles */
@@ -34,6 +43,19 @@
 
     .side-menu li:HOVER, .side-menu li.selected{
         background-color: {{styles.variables['$side-menu-highlighted-color'] || styles.variables.$contrastColor}};
+    }
+
+    .side-menu.light {
+        background-color: {{styles.variables['$side-menu-text-color'] || styles.variables.$lightColor}};
+        color: {{styles.variables['$side-menu-background-color'] || styles.variables.$darkColor}};
+    }
+
+    .side-menu.light .side-menu-title{
+        color: {{styles.variables['$side-menu-title-color'] || styles.variables.$contrastColor}};
+    }
+
+    .side-menu.light li a {
+        color: {{styles.variables['$side-menu-background-color'] || styles.variables.$darkColor}};
     }
 
 
@@ -70,6 +92,16 @@
     table thead th.sortable:hover:after{
         border-top: 7px solid {{styles.variables['$table-contrast-color'] || styles.variables.$contrastColor}};
     }
+
+
+    table.light thead{
+        color: {{styles.variables['$table-header-background-color'] || styles.variables.$darkColor}};
+    }
+
+    table.light thead tr{
+        background-color: {{styles.variables['$table-header-text-color'] || styles.variables.$lightColor}};
+    }
+
 
 
 
@@ -152,11 +184,8 @@
 
 
 
-    @media screen and (min-width: 1024px){
-        body .wrapper .content {
-            background-image: linear-gradient(to right, {{styles.variables.$darkColor}} 0%, {{styles.variables.$darkColor}} 25%, #fff 25%, #fff 100%);
-            background-repeat: repeat-y;
-        }
+    body .wrapper .content{
+        background-color: {{styles.variables['$nonTheme-background-color']}};
     }
 
 </style>

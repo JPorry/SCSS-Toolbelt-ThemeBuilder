@@ -37,10 +37,10 @@ body .wrapper{
 body .wrapper{
   font-family: 'Open Sans', sans-serif;
   height: 100vh;
-  overflow: hidden;
+  //overflow: hidden;
 
   aside{
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100vh;
     width: 0;
@@ -128,30 +128,37 @@ body .wrapper{
 
   .content{
     @include row();
+    position: absolute;
+    top: 0;
+    left: 0;
     min-height: 100vh;
 
-    @include large-styles(){
-      background-image: linear-gradient(to right, $lightColor 0%, $lightColor 25%, $background-color 25%, $background-color 100%);
-      background-repeat: repeat-y;
-    }
+    background-color: #fff;
 
     h2{
       font-size: 1.8rem;
       margin: 15px 0;
     }
 
-    header{
-      @include grid-cell();
+    header {
+      position: fixed;
+      width: calc(100% - #{$side-menu-width});
+      z-index: 9;
     }
 
     .sideMenu{
       @include grid-cell();
       @include large-grid-cell(1,4);
 
-      background-color: pink;
+      padding-top: $toolbar-height;
 
-      .sideMenu{
-        height: 100%;
+      @include large-styles() {
+
+        padding-left: 20px;
+
+        .side-menu {
+          margin-top: 20px;
+        }
       }
     }
 
@@ -159,10 +166,13 @@ body .wrapper{
       @include grid-cell(1,1,0,20px);
       @include large-grid-cell(3,4);
 
-      max-height: 100vh;
-      padding-bottom: $toolbar-height + 20px;
+      min-height: 100vh;
 
-      overflow-y: auto;
+      @include large-styles(){
+        padding-top: $toolbar-height;
+      }
+
+      //overflow-y: auto;
     }
   }
 }
@@ -205,4 +215,19 @@ label.input{
     left: 35px;
     top: -5px;
   }
+}
+
+.switcher{
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  cursor: pointer;
+  background-color: $primaryColor;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
 }

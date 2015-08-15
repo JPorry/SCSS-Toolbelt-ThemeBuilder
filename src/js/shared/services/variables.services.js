@@ -16,7 +16,9 @@ angular.module('baseProject')
             $dangerColor: '#E74C3C',
             $infoColor: '#1ABC9C',
             $warningColor: '#F1C40F',
-            $disabledColor: '#BDC3C7'
+            $disabledColor: '#BDC3C7',
+
+            '$nonTheme-background-color': '#fff'
         };
 
         var variables = _.extend({}, defaultVariables);
@@ -32,7 +34,9 @@ angular.module('baseProject')
             var scssString = '';
 
             _.forEach(variables, function(val, key){
-                scssString += key + ': ' + val + ';\n';
+                if(key.indexOf('nonTheme') === -1){
+                    scssString += key + ': ' + val + ';\n';
+                }
             });
 
             var blob = new Blob([scssString], {type: 'text/plain;charset=utf-8'});

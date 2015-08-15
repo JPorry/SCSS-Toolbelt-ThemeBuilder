@@ -3,92 +3,99 @@
         <i class="fa fa-times" ng-click="sidebar.toggle()"></i>
     </div>
 
+    <collapsable title="Non Theme variables">
+        <form action="">
+            <variable-changer variable="$nonTheme-background-color" label="Background Color"></variable-changer>
+        </form>
+    </collapsable>
+
     <collapsable title="General Variables" open="true">
         <form action="">
-            <variable-changer variable="$darkColor"></variable-changer>
-            <variable-changer variable="$lightColor"></variable-changer>
-            <variable-changer variable="$contrastColor"></variable-changer>
-            <variable-changer variable="$midtone"></variable-changer>
-            <variable-changer variable="$darkTextColor"></variable-changer>
-            <variable-changer variable="$lightTextColor"></variable-changer>
-            <variable-changer variable="$primaryColor"></variable-changer>
-            <variable-changer variable="$secondaryColor"></variable-changer>
-            <variable-changer variable="$dangerColor"></variable-changer>
-            <variable-changer variable="$infoColor"></variable-changer>
-            <variable-changer variable="$warningColor"></variable-changer>
-            <variable-changer variable="$disabledColor"></variable-changer>
+            <variable-changer variable="$darkColor" label="Dark Color"></variable-changer>
+            <variable-changer variable="$lightColor" label="Light Color"></variable-changer>
+            <variable-changer variable="$contrastColor" label="Contrast Color"></variable-changer>
+            <variable-changer variable="$midtone" label="Midtone"></variable-changer>
+            <variable-changer variable="$darkTextColor" label="Dark Text Color"></variable-changer>
+            <variable-changer variable="$lightTextColor" label="Light Text Color"></variable-changer>
+            <variable-changer variable="$primaryColor" label="Primary Color"></variable-changer>
+            <variable-changer variable="$secondaryColor" label="Secondary Color"></variable-changer>
+            <variable-changer variable="$dangerColor" label="Danger Color"></variable-changer>
+            <variable-changer variable="$infoColor" label="Info Color"></variable-changer>
+            <variable-changer variable="$warningColor" label="Warning Color"></variable-changer>
+            <variable-changer variable="$disabledColor" label="Disabled Color"></variable-changer>
         </form>
     </collapsable>
 
 
     <collapsable title="Toolbar Variables">
         <form action="">
-            <variable-changer variable="$toolbar-background-color" specific="true"></variable-changer>
-            <variable-changer variable="$toolbar-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$toolbar-highlight-color" specific="true"></variable-changer>
+            <variable-changer variable="$toolbar-background-color" specific="true" label="Background Color"></variable-changer>
+            <variable-changer variable="$toolbar-text-color" specific="true" label="Text Color"></variable-changer>
+            <variable-changer variable="$toolbar-highlight-color" specific="true" label="Highlight Color"></variable-changer>
         </form>
     </collapsable>
 
 
     <collapsable title="Side Menu Variables">
         <form action="">
-            <variable-changer variable="$side-menu-background-color" specific="true"></variable-changer>
-            <variable-changer variable="$side-menu-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$side-menu-highlighted-color" specific="true"></variable-changer>
-            <variable-changer variable="$side-menu-title-color" specific="true"></variable-changer>
+            <variable-changer variable="$side-menu-background-color" specific="true" label="Background Color"></variable-changer>
+            <variable-changer variable="$side-menu-text-color" specific="true" label="Text Color"></variable-changer>
+            <variable-changer variable="$side-menu-highlighted-color" specific="true" label="Highlight Color"></variable-changer>
+            <variable-changer variable="$side-menu-title-color" specific="true" label="Menu Title Color"></variable-changer>
         </form>
     </collapsable>
 
     <collapsable title="Tables Variables">
         <form action="">
-            <variable-changer variable="$table-header-background-color" specific="true"></variable-changer>
-            <variable-changer variable="$table-header-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$table-contrast-color" specific="true"></variable-changer>
-            <variable-changer variable="$table-row-color" specific="true"></variable-changer>
-            <variable-changer variable="$table-even-row-color" specific="true"></variable-changer>
-            <variable-changer variable="$table-hover-row-color" specific="true"></variable-changer>
-            <variable-changer variable="$table-border-color" specific="true"></variable-changer>
+            <variable-changer variable="$table-header-background-color" specific="true" label="Background Color"></variable-changer>
+            <variable-changer variable="$table-header-text-color" specific="true" label="Text Color"></variable-changer>
+            <variable-changer variable="$table-contrast-color" specific="true" label="Contrast Color"></variable-changer>
+            <variable-changer variable="$table-row-color" specific="true" label="Row Color"></variable-changer>
+            <variable-changer variable="$table-even-row-color" specific="true" label="Even Row Color"></variable-changer>
+            <variable-changer variable="$table-hover-row-color" specific="true" label="Hover Row Color"></variable-changer>
+            <variable-changer variable="$table-border-color" specific="true" label="Border Color"></variable-changer>
         </form>
     </collapsable>
 
     <collapsable title="Buttons Variables">
         <form action="">
-            <variable-changer variable="$buttons-primary-color" specific="true"></variable-changer>
-            <variable-changer variable="$buttons-secondary-color" specific="true"></variable-changer>
-            <variable-changer variable="$buttons-danger-color" specific="true"></variable-changer>
-            <variable-changer variable="$buttons-info-color" specific="true"></variable-changer>
-            <variable-changer variable="$buttons-warning-color" specific="true"></variable-changer>
-            <variable-changer variable="$buttons-disabled-color" specific="true"></variable-changer>
+            <variable-changer variable="$buttons-primary-color" specific="true" label="Primary Color"></variable-changer>
+            <variable-changer variable="$buttons-secondary-color" specific="true" label="Secondary Color"></variable-changer>
+            <variable-changer variable="$buttons-danger-color" specific="true" label="Danger Color"></variable-changer>
+            <variable-changer variable="$buttons-info-color" specific="true" label="Info Color"></variable-changer>
+            <variable-changer variable="$buttons-warning-color" specific="true" label="Warning Color"></variable-changer>
+            <variable-changer variable="$buttons-disabled-color" specific="true" label="Disabled Color"></variable-changer>
 
-            <variable-changer variable="$buttons-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$buttons-secondary-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$buttons-danger-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$buttons-info-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$buttons-warning-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$buttons-disabled-text-color" specific="true"></variable-changer>
+            <variable-changer variable="$buttons-text-color" specific="true" label="Primary Text Color"></variable-changer>
+            <variable-changer variable="$buttons-secondary-text-color" specific="true" label="Secondary Text Color"></variable-changer>
+            <variable-changer variable="$buttons-danger-text-color" specific="true" label="Danger Text Color"></variable-changer>
+            <variable-changer variable="$buttons-info-text-color" specific="true" label="Info Text Color"></variable-changer>
+            <variable-changer variable="$buttons-warning-text-color" specific="true" label="Warning Text Color"></variable-changer>
+            <variable-changer variable="$buttons-disabled-text-color" specific="true" label="Disabled Text Color"></variable-changer>
 
-            <variable-changer variable="$buttons-active-overlay-color" specific="true"></variable-changer>
-            <variable-changer variable="$buttons-overlay-color" specific="true"></variable-changer>
+            <variable-changer variable="$buttons-active-overlay-color" specific="true" label="Active Overlay Color"></variable-changer>
+            <variable-changer variable="$buttons-overlay-color" specific="true" label="Overlay Color"></variable-changer>
         </form>
     </collapsable>
 
     <collapsable title="Alerts Variables">
         <form action="">
-            <variable-changer variable="$alert-primary-background-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-secondary-background-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-warning-background-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-info-background-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-danger-background-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-secondary-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-warning-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-info-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-danger-text-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-border-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-secondary-border-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-warning-border-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-info-border-color" specific="true"></variable-changer>
-            <variable-changer variable="$alert-danger-border-color" specific="true"></variable-changer>
+            <variable-changer variable="$alert-primary-background-color" specific="true" label="Primary Color"></variable-changer>
+            <variable-changer variable="$alert-secondary-background-color" specific="true" label="Secondary Color"></variable-changer>
+            <variable-changer variable="$alert-warning-background-color" specific="true" label="Warning Color"></variable-changer>
+            <variable-changer variable="$alert-info-background-color" specific="true" label="Info Color"></variable-changer>
+            <variable-changer variable="$alert-danger-background-color" specific="true" label="Danger Color"></variable-changer>
+            <variable-changer variable="$alert-text-color" specific="true" label="Text Color"></variable-changer>
+
+            <variable-changer variable="$alert-secondary-text-color" specific="true" label="Secondary Text Color"></variable-changer>
+            <variable-changer variable="$alert-warning-text-color" specific="true" label="Warning Text Color"></variable-changer>
+            <variable-changer variable="$alert-info-text-color" specific="true" label="Info Text Color"></variable-changer>
+            <variable-changer variable="$alert-danger-text-color" specific="true" label="Danger Text Color"></variable-changer>
+            <variable-changer variable="$alert-border-color" specific="true" label="Border Color"></variable-changer>
+            <variable-changer variable="$alert-secondary-border-color" specific="true" label="Secondary Border Color"></variable-changer>
+            <variable-changer variable="$alert-warning-border-color" specific="true" label="Warning Border Color"></variable-changer>
+            <variable-changer variable="$alert-info-border-color" specific="true" label="Info Border Color"></variable-changer>
+            <variable-changer variable="$alert-danger-border-color" specific="true" label="Danger Border Color"></variable-changer>
         </form>
     </collapsable>
 
