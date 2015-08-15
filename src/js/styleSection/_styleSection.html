@@ -73,57 +73,79 @@
 
 
 
-
+    /* Button styles */
 
 
     button{
-        color: {{styles.variables.$lightTextColor}};
-        background-color: {{styles.variables.$primaryColor}};
+        color: {{styles.variables['$buttons-text-color'] || styles.variables.$lightTextColor}};
+        background-color: {{styles.variables['$buttons-primary-color'] || styles.variables.$primaryColor}};
+    }
+
+    button:after{
+        background-color: {{styles.variables['$buttons-overlay-color'] || '#fff'}};
+    }
+
+    button:active:after{
+        background-color: {{styles.variables['$buttons-active-overlay-color'] || '#000'}};
     }
 
     button.secondary{
-        background-color: {{styles.variables.$secondaryColor}};
+        color: {{styles.variables['$buttons-secondary-text-color'] || styles.variables['$buttons-text-color'] || styles.variables.$lightTextColor}};
+        background-color: {{styles.variables['$buttons-secondary-color'] || styles.variables.$secondaryColor}};
     }
 
     button.danger{
-        background-color: {{styles.variables.$dangerColor}};
+        color: {{styles.variables['$buttons-danger-text-color'] || styles.variables['$buttons-text-color'] || styles.variables.$lightTextColor}};
+        background-color: {{styles.variables['$buttons-danger-color'] || styles.variables.$dangerColor}};
     }
 
     button.info{
-        background-color: {{styles.variables.$infoColor}};
+        color: {{styles.variables['$buttons-info-text-color'] || styles.variables['$buttons-text-color'] || styles.variables.$lightTextColor}};
+        background-color: {{styles.variables['$buttons-info-color'] || styles.variables.$infoColor}};
     }
 
     button.warning{
-        background-color: {{styles.variables.$warningColor}};
+        color: {{styles.variables['$buttons-warning-text-color'] || styles.variables['$buttons-text-color'] || styles.variables.$lightTextColor}};
+        background-color: {{styles.variables['$buttons-warning-color'] || styles.variables.$warningColor}};
     }
 
     button:disabled{
-        background-color: {{styles.variables.$disabledColor}} !important;
+        color: {{styles.variables['$buttons-disabled-text-color'] || styles.variables['$buttons-text-color'] || styles.variables.$lightTextColor}} !important;
+        background-color: {{styles.variables['$buttons-disabled-color'] || styles.variables.$disabledColor}} !important;
     }
 
 
 
-
+    /* Alert styles */
 
     .alert{
-        color: {{styles.variables.$lightTextColor}};
-        background-color: {{styles.variables.$primaryColor}};
+        color: {{styles.variables['$alert-text-color'] || styles.variables.$lightTextColor}};
+        background-color: {{styles.variables['$alert-primary-background-color'] || styles.variables.$primaryColor}};
+        border-color: {{styles.variables['$alert-border-color'] || 'rgba(0,0,0,.1)'}};
     }
 
     .alert.secondary{
-        background-color: {{styles.variables.$secondaryColor}};
+        color: {{styles.variables['$alert-secondary-text-color'] || styles.variables.$lightTextColor}};
+        background-color: {{styles.variables['$alert-secondary-background-color'] || styles.variables.$secondaryColor}};
+        border-color: {{styles.variables['$alert-secondary-border-color'] || styles.variables['$alert-border-color'] || 'rgba(0,0,0,.1)'}};
     }
 
     .alert.danger{
-        background-color: {{styles.variables.$dangerColor}};
+        color: {{styles.variables['$alert-danger-text-color'] || styles.variables.$lightTextColor}};
+        background-color: {{styles.variables['$alert-danger-background-color'] || styles.variables.$dangerColor}};
+        border-color: {{styles.variables['$alert-danger-border-color'] || styles.variables['$alert-border-color'] || 'rgba(0,0,0,.1)'}};
     }
 
     .alert.info{
-        background-color: {{styles.variables.$infoColor}};
+        color: {{styles.variables['$alert-info-text-color'] || styles.variables.$lightTextColor}};
+        background-color: {{styles.variables['$alert-info-background-color'] || styles.variables.$infoColor}};
+        border-color: {{styles.variables['$alert-info-border-color'] || styles.variables['$alert-border-color'] || 'rgba(0,0,0,.1)'}};
     }
 
     .alert.warning{
-        background-color: {{styles.variables.$warningColor}};
+        color: {{styles.variables['$alert-warning-text-color'] || styles.variables.$lightTextColor}};
+        background-color: {{styles.variables['$alert-warning-background-color'] || styles.variables.$warningColor}};
+        border-color: {{styles.variables['$alert-warning-border-color'] || styles.variables['$alert-border-color'] || 'rgba(0,0,0,.1)'}};
     }
 
 
